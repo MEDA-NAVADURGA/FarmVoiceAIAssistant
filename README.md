@@ -1,51 +1,36 @@
-Farm Pal AI 🚜🌾
-A Vite + React + TypeScript web app that provides a farmer-focused chat assistant with voice input, text-to-speech, and Supabase-backed data. Includes serverless functions for ElevenLabs TTS and scribing audio.
+# 🚜🌾 Farm Pal AI
 
-Key Features ✨
-Conversational UI tailored for farmers
-Voice input and speech-to-text support
-Text-to-speech via ElevenLabs
-Persistent data and auth using Supabase
-Modern UI built with TailwindCSS + shadcn components
-Serverless functions for TTS and scribing
+**Farm Pal AI** is a voice-based, farmer-friendly AI assistant designed to help farmers get agricultural information through **spoken interaction**.  
+The application focuses on **simplicity, accessibility, and ease of use**, especially for users who prefer voice over text.
 
-Tech Stack 🔧
-Vite + React + TypeScript
-Tailwind CSS, shadcn UI components
-Supabase (client + serverless functions)
-ElevenLabs TTS / voice integrations
-Vitest for testing
-ESLint for linting
+This project currently demonstrates the **frontend and voice interaction flow**.
 
+---
 
-Quick Start ⚡
-Prerequisites:
+## ✨ Features
 
-Node.js 18+ (or compatible)
-npm or pnpm
-(Optional) Supabase CLI for local functions
+- 🎤 Voice-based interaction (no manual typing)
+- 🗣️ Speech-to-text for farmer queries
+- 🔊 Text-to-speech for assistant responses
+- 🌾 Conversational interface tailored for farmers
+- 🌐 Web-based (runs directly in the browser)
 
-npm install
-npm run dev
-# build
-npm run build
-# preview build
-npm run preview
-# tests
-npm run test
-# lint
-npm run lint
+---
 
-Environment Variables 🔐
-Create a .env or .env.local with these (example names used by the project):
+## 🧰 Tech Used
 
-Note: Never commit secrets to source control.
+- HTML
+- CSS
+- JavaScript
+- Web Speech API (Browser-based)
 
-VITE_SUPABASE_URL — your Supabase project URL
-VITE_SUPABASE_ANON_KEY — your Supabase anon/public key
-ELEVENLABS_API_KEY — ElevenLabs API key
-ELEVENLABS_VOICE_ID — default voice ID for TTS (if needed)
-Also check any supabase/functions/* for function-specific secrets.
+---
 
-Supabase Functions 📡
-Functions are in functions. Deploying (using the Supabase CLI):
+## 🚀 Getting Started
+
+### 1️⃣ Clone the Repository
+
+```bash
+git clone https://github.com/MEDA-NAVADURGA/FarmVoiceAIAssistant.git
+cd FarmVoiceAIAssistant
+```
