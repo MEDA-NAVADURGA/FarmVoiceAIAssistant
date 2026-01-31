@@ -1,6 +1,6 @@
-# 🚜🌾 Farm Pal AI
+# 🚜🌾 FarmVoiceAiAssistant
 
-**Farm Pal AI** is a voice-based, farmer-friendly AI assistant designed to help farmers get agricultural information through **spoken interaction**.  
+**FarmVoiceAiAssistant** is a voice-based, farmer-friendly AI assistant designed to help farmers get agricultural information through **spoken interaction**.  
 The application focuses on **simplicity, accessibility, and ease of use**, especially for users who prefer voice over text.
 
 This project currently demonstrates the **frontend and voice interaction flow**.
@@ -34,3 +34,4 @@ This project currently demonstrates the **frontend and voice interaction flow**.
 git clone https://github.com/MEDA-NAVADURGA/FarmVoiceAIAssistant.git
 cd FarmVoiceAIAssistant
 ```
+## 🚀 Live Link : 
