@@ -11,16 +11,18 @@ interface ChatMessageProps {
   isSpeaking?: boolean;
   isCurrentlySpeaking?: boolean;
   onSpeak?: (messageId: number) => void;
+  onStop?: () => void;
 }
 
-export function ChatMessage({ 
-  role, 
-  content, 
-  isStreaming, 
+export function ChatMessage({
+  role,
+  content,
+  isStreaming,
   messageId,
   isSpeaking,
   isCurrentlySpeaking,
   onSpeak,
+  onStop,
 }: ChatMessageProps) {
   const isUser = role === 'user';
   const showSpeakButton = !isUser && content && !isStreaming;
@@ -84,12 +86,25 @@ export function ChatMessage({
         </div>
 
         {/* Speak button for assistant messages */}
-        {showSpeakButton && onSpeak && (
+        {showSpeakButton && (onSpeak !== undefined || onStop !== undefined) && (
           <Button
             variant="ghost"
             size="sm"
             className="self-start h-7 px-2 text-muted-foreground hover:text-foreground"
-            onClick={() => onSpeak(messageId)}
+            onClick={() => {
+              try {
+                console.log('Button clicked, isCurrentlySpeaking:', isCurrentlySpeaking, 'isSpeaking:', isSpeaking, 'messageId:', messageId, 'onStop exists:', !!onStop);
+                if (isCurrentlySpeaking && onStop) {
+                  console.log('Calling onStop');
+                  onStop();
+                } else {
+                  console.log('Calling onSpeak');
+                  onSpeak?.(messageId);
+                }
+              } catch (error) {
+                console.error('Error in button click:', error);
+              }
+            }}
             disabled={isSpeaking && !isCurrentlySpeaking}
           >
             {isCurrentlySpeaking ? (

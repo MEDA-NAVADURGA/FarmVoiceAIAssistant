@@ -1,0 +1,2 @@
+- [x] Update FarmerChat.tsx to pass the `stop` function to ChatMessage component
+- [x] Update ChatMessage.tsx to accept `onStop` prop and use it for stopping audio

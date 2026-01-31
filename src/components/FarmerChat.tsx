@@ -218,6 +218,7 @@ export function FarmerChat() {
                   isSpeaking={isSpeaking}
                   isCurrentlySpeaking={currentMessageId === idx}
                   onSpeak={handleSpeak}
+                  onStop={stop}
                 />
               ))}
               <div ref={messagesEndRef} />
