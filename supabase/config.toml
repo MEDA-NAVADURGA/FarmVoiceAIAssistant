@@ -1,0 +1,10 @@
+project_id = "uaqmdoklhozwblofplby"
+
+[functions.farmer-chat]
+verify_jwt = false
+
+[functions.elevenlabs-tts]
+verify_jwt = false
+
+[functions.elevenlabs-scribe-token]
+verify_jwt = false

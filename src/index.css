@@ -1,0 +1,232 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Farmer Assistant Design System - Earthy, Warm, Approachable */
+
+@layer base {
+  :root {
+    /* Primary - Lush Farm Green */
+    --primary: 142 50% 35%;
+    --primary-foreground: 0 0% 100%;
+    
+    /* Background - Warm Cream */
+    --background: 42 40% 97%;
+    --foreground: 25 30% 15%;
+    
+    /* Card - Soft Cream */
+    --card: 40 35% 95%;
+    --card-foreground: 25 30% 15%;
+    
+    /* Popover */
+    --popover: 0 0% 100%;
+    --popover-foreground: 25 30% 15%;
+    
+    /* Secondary - Terracotta */
+    --secondary: 18 55% 50%;
+    --secondary-foreground: 0 0% 100%;
+    
+    /* Muted - Soft Earth */
+    --muted: 35 25% 90%;
+    --muted-foreground: 25 15% 45%;
+    
+    /* Accent - Golden Wheat */
+    --accent: 45 75% 55%;
+    --accent-foreground: 25 30% 15%;
+    
+    /* Destructive */
+    --destructive: 0 65% 50%;
+    --destructive-foreground: 0 0% 100%;
+    
+    /* Border and Input */
+    --border: 35 20% 85%;
+    --input: 35 20% 85%;
+    --ring: 142 50% 35%;
+    
+    /* Radius */
+    --radius: 0.75rem;
+    
+    /* Sidebar */
+    --sidebar-background: 142 40% 25%;
+    --sidebar-foreground: 0 0% 98%;
+    --sidebar-primary: 45 75% 55%;
+    --sidebar-primary-foreground: 25 30% 15%;
+    --sidebar-accent: 142 35% 30%;
+    --sidebar-accent-foreground: 0 0% 98%;
+    --sidebar-border: 142 30% 35%;
+    --sidebar-ring: 45 75% 55%;
+    
+    /* Custom Colors for Farmer Theme */
+    --farmer-green: 142 50% 35%;
+    --farmer-green-light: 142 45% 45%;
+    --farmer-terracotta: 18 55% 50%;
+    --farmer-wheat: 45 75% 55%;
+    --farmer-soil: 25 35% 25%;
+    --farmer-sky: 200 70% 55%;
+    --farmer-cream: 42 40% 97%;
+    
+    /* Chat specific */
+    --chat-user: 142 45% 90%;
+    --chat-assistant: 0 0% 100%;
+    --chat-user-foreground: 25 30% 15%;
+    --chat-assistant-foreground: 25 30% 15%;
+  }
+
+  .dark {
+    --primary: 142 45% 45%;
+    --primary-foreground: 0 0% 100%;
+    
+    --background: 25 30% 8%;
+    --foreground: 40 20% 92%;
+    
+    --card: 25 25% 12%;
+    --card-foreground: 40 20% 92%;
+    
+    --popover: 25 25% 12%;
+    --popover-foreground: 40 20% 92%;
+    
+    --secondary: 18 50% 45%;
+    --secondary-foreground: 0 0% 100%;
+    
+    --muted: 25 20% 18%;
+    --muted-foreground: 35 15% 60%;
+    
+    --accent: 45 70% 50%;
+    --accent-foreground: 25 30% 10%;
+    
+    --destructive: 0 60% 45%;
+    --destructive-foreground: 0 0% 100%;
+    
+    --border: 25 20% 20%;
+    --input: 25 20% 20%;
+    --ring: 142 45% 45%;
+    
+    --sidebar-background: 25 30% 10%;
+    --sidebar-foreground: 40 20% 92%;
+    --sidebar-primary: 45 70% 50%;
+    --sidebar-primary-foreground: 25 30% 10%;
+    --sidebar-accent: 25 25% 15%;
+    --sidebar-accent-foreground: 40 20% 92%;
+    --sidebar-border: 25 20% 18%;
+    --sidebar-ring: 45 70% 50%;
+    
+    --farmer-green: 142 45% 45%;
+    --farmer-green-light: 142 40% 55%;
+    --farmer-terracotta: 18 50% 45%;
+    --farmer-wheat: 45 70% 50%;
+    --farmer-soil: 25 25% 35%;
+    --farmer-sky: 200 65% 50%;
+    --farmer-cream: 25 30% 8%;
+    
+    --chat-user: 142 35% 20%;
+    --chat-assistant: 25 25% 15%;
+    --chat-user-foreground: 40 20% 92%;
+    --chat-assistant-foreground: 40 20% 92%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground antialiased;
+    font-family: 'Inter', system-ui, sans-serif;
+  }
+}
+
+@layer utilities {
+  /* Gradient utilities */
+  .gradient-farm {
+    background: linear-gradient(135deg, hsl(var(--farmer-green)) 0%, hsl(var(--farmer-green-light)) 100%);
+  }
+  
+  .gradient-sunrise {
+    background: linear-gradient(180deg, hsl(var(--farmer-wheat)) 0%, hsl(var(--farmer-terracotta)) 100%);
+  }
+  
+  .gradient-earth {
+    background: linear-gradient(135deg, hsl(var(--farmer-soil)) 0%, hsl(var(--farmer-terracotta)) 100%);
+  }
+  
+  /* Subtle pattern overlay for agricultural feel */
+  .pattern-grain {
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 400 400' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+    opacity: 0.03;
+  }
+  
+  /* Animation utilities */
+  .animate-fade-in {
+    animation: fadeIn 0.4s ease-out forwards;
+  }
+  
+  .animate-slide-up {
+    animation: slideUp 0.4s ease-out forwards;
+  }
+  
+  .animate-bounce-gentle {
+    animation: bounceGentle 2s ease-in-out infinite;
+  }
+  
+  .animate-pulse-slow {
+    animation: pulseSlow 3s ease-in-out infinite;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes bounceGentle {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-5px);
+  }
+}
+
+@keyframes pulseSlow {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.7;
+  }
+}
+
+/* Scrollbar styling for chat */
+.scrollbar-thin::-webkit-scrollbar {
+  width: 6px;
+}
+
+.scrollbar-thin::-webkit-scrollbar-track {
+  background: hsl(var(--muted));
+  border-radius: 3px;
+}
+
+.scrollbar-thin::-webkit-scrollbar-thumb {
+  background: hsl(var(--border));
+  border-radius: 3px;
+}
+
+.scrollbar-thin::-webkit-scrollbar-thumb:hover {
+  background: hsl(var(--muted-foreground));
+}
